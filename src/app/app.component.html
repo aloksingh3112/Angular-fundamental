@@ -13,3 +13,26 @@
    hello ...{{data}}
 </div>
 
+<!-- //ngFor internal structure -->
+<div>
+    <h3>Data List</h3>
+
+    <ul >
+      <ng-template ngFor let-user let-i='index' [ngForOf]='users'>
+      <li>{{i}}</li>
+      <li>{{user.name}}</li>
+      <li>{{user.age}}</li>
+    </ng-template>
+    </ul>
+
+  </div>
+
+
+<div>
+  <h3>Data List</h3>
+  <ul *ngFor='let user of users;let i=index' >
+    <li>{{i}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.age}}</li>
+  </ul>
+</div>
